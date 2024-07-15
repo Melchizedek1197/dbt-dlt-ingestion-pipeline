@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.3
+dlt[parquet]==0.4.10
+dlt[snowflake]==0.4.10
+psutil==5.9.8
+pydantic==2.6.3
+pydantic_core==2.16.3
+Requests==2.31.0
+tenacity==8.2.3
