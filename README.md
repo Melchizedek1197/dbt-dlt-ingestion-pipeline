@@ -50,20 +50,5 @@ Check the terminal output for any warnings or errors. Ensure that the pipeline c
 Confirm that the data has been loaded into DuckDB or your specified destination by running:
 dlt pipeline alpaca_crypto show
 
-## Folder Structure
-project-root/
-│
-├── alpaca_crypto_dlt_pipeline.py     # Main pipeline script
-├── crypto_data_dlt/                  # Module for data ingestion
-│   ├── __init__.py                   # Initialization script
-│   ├── helpers.py                    # Helper functions for API interactions
-│   └── custom_paginator.py           # Custom paginator for pagination handling
-├── schemas/                          # DBT schemas for data transformation (if applicable)
-│   └── export/                       # Export schemas
-│
-├── .dlt/                             # Configuration files for `dlt` library setup
-│   ├── secrets.toml                  # Credentials and secrets configuration
-│   ├── config.toml                   # Configuration settings for the pipeline
-│   └── ...
-└── requirements.txt                  # Python dependencies
+
 
