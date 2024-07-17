@@ -1,5 +1,5 @@
-version: 4
-version_hash: Df4FnyY0PWyNvWBx2VUlDjMBRgAz1aPtC8Eis8w6j8M=
+version: 5
+version_hash: SnYterq9LfpKZNisBJA1JJ9AgpqUmjhNLaoNKqN7t6k=
 engine_version: 9
 name: alpaca_crypto
 tables:
@@ -148,6 +148,50 @@ tables:
     write_disposition: replace
     x-normalizer:
       seen-data: true
+  crypto_data__btc_usd:
+    columns:
+      c:
+        data_type: double
+        nullable: true
+      h:
+        data_type: bigint
+        nullable: true
+      l:
+        data_type: double
+        nullable: true
+      n:
+        data_type: bigint
+        nullable: true
+      o:
+        data_type: double
+        nullable: true
+      t:
+        data_type: timestamp
+        nullable: true
+      v:
+        data_type: double
+        nullable: true
+      vw:
+        data_type: double
+        nullable: true
+      _dlt_parent_id:
+        data_type: text
+        nullable: false
+        foreign_key: true
+      _dlt_list_idx:
+        data_type: bigint
+        nullable: false
+      _dlt_id:
+        data_type: text
+        nullable: false
+        unique: true
+      h__v_double:
+        data_type: double
+        nullable: true
+        variant: true
+    parent: crypto_data
+    x-normalizer:
+      seen-data: true
 settings:
   detections:
   - iso_timestamp
@@ -169,6 +213,7 @@ normalizers:
   json:
     module: dlt.common.normalizers.json.relational
 previous_hashes:
+- Df4FnyY0PWyNvWBx2VUlDjMBRgAz1aPtC8Eis8w6j8M=
 - oHoD/RMQB5gyjFv6ReIPzDg/wObylErLq2evpL2stnI=
 - gk+kJJ5jiTMCfdyqsgZ4UlJws2els7d5gTh/ECV1lTA=
 - uIcK1RJVEbUK2xjNA8BqSX3rnOwaCueIWpoZEnXypH4=
